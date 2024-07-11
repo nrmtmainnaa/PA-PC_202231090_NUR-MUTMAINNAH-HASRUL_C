@@ -1,11 +1,8 @@
 # PA-PC_202231090_NUR-MUTMAINNAH-HASRUL_C
 
 1. # Mengimport Library
-<td>
 import cv2
-  <tr>
 import numpy as np
-    <tr>
 import matplotlib.pyplot as plt
 fungsi ini untuk memasukkan library yang agar gambar tersebut bisa saya mengolah dan menampilkan
 
