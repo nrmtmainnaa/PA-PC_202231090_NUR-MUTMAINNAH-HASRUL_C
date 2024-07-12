@@ -4,6 +4,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+
 fungsi ini untuk memasukkan library yang agar gambar tersebut bisa saya mengolah dan menampilkan
 
  2. # membaca gambar
