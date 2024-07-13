@@ -1,3 +1,22 @@
+# FILTERING CITRA
+Filtering citra merupakan salah satu bagian dari perbaikan kualitas citra, yaitu menghaluskan dan menghilangkan noise yang ada pada citra, baik secara linear maupun secara non-linear.Perbaikan kualitas citra merupakan suatu proses yang dilakukan untuk mendapatkan kondisi tertentu pada citra. Proses tersebut dilakukan dengan menggunakan berbagai macam metode tergantung pada kondisi yang diharapkan pada citra, seperti mempertajam bagian tertentu pada citra, menghilangkan noise atau gangguan, manipulasi kontras dan skala keabuan, dan sebagainya. Secara umum metode-metode yang digunakan dapat digolongkan kedalam dua kelompok yaitu metode domain frekuensi dan metode domain spasial. 
+Pada metode domain frekuensi, teknik pemrosesannya berdasarkan pada transformasi Fourier terhadap nilai pixel. Sedangkan pada metode domain spasial prosesnya dioperasikan langsung terhadap pixel, dimana untuk memproses sebuah pixel harus mengikut sertakan pixel-pixel tetangganya. Fungsi matematis dari metode domain spasial adalah sebagai berikut
+:
+g (x,y) = T [f (x,y)]	       (2.1)
+f (x,y) adalah fungsi citra masukan, g (x,y) adalah citra hasil atau keluaran, sedangkan T adalah operator atas f, yang didefinisikan terhadap kumpulan tetangga-tetangga (x,y). Contoh dari metode ini adalah operasi filtering citra yaitu penghalusan citra dengan cara menghilangkan noise pada citra.
+
+Metode Mean Filter
+Metode mean filter adalah satu teknik filtering yang bekerja dengan cara menggantikan intensitas suatu pixel dengan rata-rata nilai pixel dari pixel-pixel tetangganya. Jika suatu citra f(x,y) yang berukuran M x N dilakukan proses filtering dengan penapis h(x,y) maka akan menghasilkan citra g(x,y), dimana penapis h(x,y) merupakan matrik yang berisi nilai 1/ukuran penapis. Secara matematis proses tersebut dapat dinyatakan sebagai berikut:
+g(x,y) = f(x,y) * h(x,y)                  (2.2)	(2.7) 
+Operasi diatas dipandang sebagai konvolusi antara citra f(x,y) dengan penapis h(x,y), dimana * menyatakan operator konvolusi dan prosesnya dilakukan dengan menggeser penapis konvolusi pixel per pixel.
+
+Metode Median Filter
+	Metode median filter merupakan filter non-linear yang dikembangkan Tukey, yang berfungsi untuk menghaluskan dan mengurangi noise atau gangguan pada citra. Dikatakan nonlinear karena cara kerja penapis ini tidak termasuk kedalam kategori operasi konvolusi. Operasi nonlinear dihitung dengan mengurutkan nilai intensitas sekelompok pixel, kemudian menggantikan nilai pixel yang diproses dengan nilai tertentu. 
+Pada median filter suatu window atau penapis yang memuat sejumlah pixel ganjil digeser titik per titik pada seluruh daerah citra. Nilai-nilai yang berada pada window diurutkan secara ascending untuk kemudian dihitung nilai mediannya. Nilai tersebut akan menggantikan nilai yang berada pada pusat bidang window.Jika suatu window ditempatkan pada suatu bidang citra, maka nilai pixel pada pusat bidang window dapat dihitung dengan mencari nilai median dari nilai intensitas sekelompok pixel yang telah diurutkan. Secara matematis dapat dirumuskan sebagai berikut:  	(2.3)
+dimana g(x,y) merupakan citra yang dihasilkan dari citra f(x,y) dengan w sebagai window yang ditempatkan pada bidang citra dan (i,j) elemen dari window tersebut.
+
+
+
 # PENJELASAN CODINGAN FILTERING CITRA
 
  # 1. Mengimport Library
